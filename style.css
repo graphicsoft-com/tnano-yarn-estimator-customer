@@ -1,0 +1,180 @@
+@font-face {
+    font-family: LiberationSans;
+    src: url(LiberationSans-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ 
+    font-family: LiberationSans;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+header button{
+    width: 23px;
+    height: 23px;
+    /* background-color: #292929; */
+    background-color: #121212;
+    border: 0;
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+header p{
+    font-size: 8px;
+}
+
+body{
+    background-color: #121212;
+}
+
+.estimator{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    align-items: baseline;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.estimator *{
+    margin: 4px;
+    font-weight: bold;
+}
+
+.estimator h2{
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+select{
+    background-color: #292929;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 16px;
+    margin-left: -2px;
+    flex-grow: 1;
+    color: #FF7719;
+}
+
+input{
+    background-color: #292929;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 16px;
+    flex-grow: 2;
+    margin-left: 20px;
+    text-align: right;
+    color: #FF7719;
+}
+
+.break{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.estimator label{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.inputBox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+    border-radius: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    flex-wrap: nowrap;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#types{
+    text-align: right;
+}
+
+p{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#tnanoBackgroundLogo{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    margin-left: 1px;
+    z-index: -1;
+    opacity: 0.3;
+    margin-top: -5px;
+}
+
+
+@media (min-width:600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .estimator{
+        width: 440px;
+    }
+
+    #tnanoBackgroundLogo{
+        position: absolute;
+        width: 160px;
+        height: auto;
+        margin-left: -300px;
+        z-index: -1;
+        opacity: 0.3;
+        margin-top: 60px;
+    }
+
+    header{
+        width: 440px;
+    }
+
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+        display: none;
+    }
+}
