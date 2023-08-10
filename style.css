@@ -14,34 +14,23 @@
 header{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     margin: 0;
     padding: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 0;
     margin-top: 15px;
-}
-
-header button{
-    width: 23px;
-    height: 23px;
-    /* background-color: #292929; */
-    background-color: #121212;
-    border: 0;
-    font-size: 36px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
 }
 
 header h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     margin: 0;
+}
+
+header h2{
+    margin-top: 0;
 }
 
 header p{
@@ -53,6 +42,24 @@ body{
 }
 
 .estimator{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 16px;
+}
+
+h2{
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.materialProperties{
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -61,20 +68,6 @@ body{
     padding-top: 0;
     align-items: baseline;
     font-size: 16px;
-    font-weight: bold;
-}
-
-.estimator *{
-    margin: 4px;
-    font-weight: bold;
-}
-
-.estimator h2{
-    font-size: 14px;
-    width: 100%;
-    margin-top: 20px;
-    font-style: italic;
-    font-weight: 400;
 }
 
 select{
@@ -84,8 +77,13 @@ select{
     padding: 6px;
     font-size: 16px;
     margin-left: -2px;
-    flex-grow: 1;
+    flex-grow: 0;
     color: #FF7719;
+}
+
+.result{
+    flex-grow: 1;
+    text-align: right;
 }
 
 input{
@@ -95,9 +93,9 @@ input{
     padding: 6px;
     font-size: 16px;
     flex-grow: 2;
-    margin-left: 20px;
     text-align: right;
     color: #FF7719;
+    margin: 4px;
 }
 
 .break{
@@ -106,17 +104,18 @@ input{
     padding: 0;
 }
 
-.estimator label{
+label{
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
-.inputBox{
+.contentBox{
     width: 100%;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin: 0;
     padding: 0;
     background-color: #292929;
     border-radius: 6px;
@@ -129,13 +128,10 @@ input{
     padding-bottom: 4px;
 }
 
-#types{
-    text-align: right;
-}
-
 p{
     padding-top: 6px;
     padding-bottom: 6px;
+    margin: 4px;
 }
 
 #tnanoBackgroundLogo{
@@ -148,30 +144,41 @@ p{
     margin-top: -5px;
 }
 
-
-@media (min-width:600px){
+@media (min-width:960px){
     body{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+        flex-wrap: wrap;
+        padding-top: 40px;
+    }
+    header{
+        width: 900px;
+    }
+    
     .estimator{
+        width: 440px;
+    }
+
+    .materialProperties{
         width: 440px;
     }
 
     #tnanoBackgroundLogo{
         position: absolute;
-        width: 160px;
+        width: 600px;
         height: auto;
         margin-left: -300px;
         z-index: -1;
         opacity: 0.3;
-        margin-top: 60px;
-    }
-
-    header{
-        width: 440px;
+        margin-top: 0;
     }
 
     input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
