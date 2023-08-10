@@ -9,61 +9,128 @@
 <body>
     <header>
         <h1>TNano Estimator</h1>
-        <!--
-            <button>≡</button>
-        -->
-        <p>V1.01</p>
+        <p>V2.0</p>
+        <h2>50 µm yarn</p>
     </header>
 
     <img src="TnanoLogo.png" id="tnanoBackgroundLogo">
 
-    <div class="estimator">
-        <h2>Inputs</h2>
-
-        <!--
-            <div class="inputBox">
-            <label for="types">Type</label>
-            <select name="types" id="types">
-                <option value="yarn">TNano Yarn</option>
-            </select>
-            <select name="subtype" id="subtype">
-                <option value="50">d = 50 um</option>
-            </select>
-         </div>
-        -->
-        
-        <div class="inputBox">
-            <label for="amount">Amount</label>
-            <input type="number" id="amount" name="amount" min="0.001" max="100000" value="100" onchange="AmountChanged(this.value)">
-            <select name="amountUnit" id="amountUnit" onchange="AmountUnitChanged(this.value)">
-                <option value="grams">grams</option>
-                <option value="kg">kg</option>
-                <option value="lbs">lbs</option>
-                <option value="km">km</option>
-                <option value="m">m</option>
-                <option value="ft">feet</option>
-            </select>
+    <div class="content">
+        <div class="estimator">
+            <h2>Inputs</h2>
+    
+            <!--
+                <div class="contentBox">
+                <label for="types">Type</label>
+                <select name="types" id="types">
+                    <option value="yarn">TNano Yarn</option>
+                </select>
+                <select name="subtype" id="subtype">
+                    <option value="50">d = 50 um</option>
+                </select>
+             </div>
+            -->
+    
+            
+            
+            <div class="contentBox">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" min="0.001" max="100000" value="100" onchange="AmountChanged(this.value)">
+                <select name="amountUnit" id="amountUnit" onchange="AmountUnitChanged()">
+                    <option value="m">m</option>
+                    <option value="grams">grams</option>
+                    <option value="km">km</option>
+                    <option value="ft">ft</option>
+                </select>
+            </div>
+            
+            <h2>Results</h2>
+    
+            <div class="contentBox">
+                <p>Cost</p>
+                <p class="result" id="pricePerAmount">$560</p>
+                <select name="pricePerAmountUnit" id="pricePerAmountUnit" onchange="RunCalculator()">
+                    <option value="m"> /m</option>
+                    <option value="km"> /km</option>
+                    <option value="grams"> /gram</option>
+                    <option value="ft"> /ft</option>
+                </select>
+            </div>
+            
+            <div class="contentBox">
+                <p>In total</p>
+                <p class="result" id="price">$1,000,000</p>
+            </div>
+    
         </div>
-
-        <div class="inputBox">
-            <label for="time">Time until delivery</label>
-            <input type="number" id="time" name="time" min="1" max="48" value="6" onchange="TimeChanged(this.value)">
-            <label for="time">months</label>
+    
+        <div class="materialProperties">
+            <h2>Material Properties</h2>
+    
+            <div class="contentBox">
+                <p id="test">Max length:</p>
+                <p>&infin;</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Diameter of single thread:</p>
+                <p>2 µm</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Diameter of final multi-ply yarn:</p>
+                <p>50 µm</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Filaments (# of nanotubes):</p>
+                <p>> 10,000</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Tensile Strength:</p>
+                <p>0.8 GPa</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Density:</p>
+                <p>1.5 g/cm<sup>3</sup></p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Resistance:</p>
+                <p>130 &#8486;/cm</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Flex Life:</p>
+                <p>1,000,000 banding cycles</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Corrosion Resistance:</p>
+                <p>Chemically stable</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Bio-compatibility:</p>
+                <p>Yes</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Flexibility:</p>
+                <p>Nanoscale curvature angle</p>
+            </div>
+    
+            <div class="contentBox">
+                <p>Linear Mass:</p>
+                <p>0.8 mg/m (for d=50 µm)</p>
+            </div>
         </div>
-        
-        <h2>Results</h2>
-
-        <div class="inputBox">
-            <p>Cost</p>
-            <p class="result" id="pricePerAmount">$560/gram</p>
-        </div>
-        
-        <div class="inputBox">
-            <p>In total</p>
-            <p class="result" id="price">$1,000,000</p>
-        </div>
-
     </div>
+
+    
+            
     <script src="scripts.js">
     </script>
 </body>
