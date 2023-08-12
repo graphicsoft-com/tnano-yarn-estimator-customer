@@ -37,17 +37,36 @@ header p{
     font-size: 8px;
 }
 
+.pageLinkHolder{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.pageLinkHolder a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: #292929;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
 body{
     background-color: #121212;
 }
 
 .estimator{
     padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+    display: block;
     font-size: 16px;
 }
 
@@ -61,12 +80,8 @@ h2{
 
 .materialProperties{
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
     padding-top: 0;
-    align-items: baseline;
     font-size: 16px;
 }
 
@@ -112,15 +127,14 @@ label{
 }
 
 .contentBox{
-    width: 100%;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     padding: 0;
     background-color: #292929;
     border-radius: 6px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     flex-wrap: nowrap;
     padding-left: 8px;
     padding-right: 8px;
@@ -132,6 +146,13 @@ p{
     padding-top: 6px;
     padding-bottom: 6px;
     margin: 4px;
+}
+
+.productImage{
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 40px;
 }
 
 #tnanoBackgroundLogo{
@@ -155,9 +176,9 @@ p{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: baseline;
         flex-wrap: wrap;
         padding-top: 40px;
+        min-height: 100vh;
     }
     header{
         width: 900px;
@@ -178,10 +199,17 @@ p{
         margin-left: -300px;
         z-index: -1;
         opacity: 0.3;
-        margin-top: 0;
+        margin-top: -350px;
     }
 
     input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
         display: none;
+    }
+
+    .productImage{
+        width: 80%;
+        height: auto;
+        margin: 0;
+        margin-left: 10%;
     }
 }
