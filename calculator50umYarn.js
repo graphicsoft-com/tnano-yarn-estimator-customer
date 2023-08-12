@@ -77,7 +77,7 @@ function RunCalculator() {
 }
 
 function UpdateTexts(pricePerGram, totalPrice){
-    document.getElementById("price").textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(totalPrice));
+    UpdateTextContent("price", new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(totalPrice)));
 
     let factor = 1;
     switch (document.getElementById("pricePerAmountUnit").value) {
@@ -94,7 +94,19 @@ function UpdateTexts(pricePerGram, totalPrice){
             factor = 5/6.5/1000/3.28084;
             break;
     }
-    document.getElementById("pricePerAmount").textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(pricePerGram*factor));
+
+    UpdateTextContent("pricePerAmount", new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(pricePerGram*factor)));
+}
+
+function UpdateTextContent(id, content){
+    let contentElement = document.getElementById(id);
+    if(contentElement.textContent != content){
+        contentElement.classList.add("fadeOut");
+        setTimeout(() => {
+            contentElement.textContent = content;
+            contentElement.classList.remove("fadeOut");
+        }, 200);
+    }
 }
 
 function PrintToConsole(amountInGrams, wafers, totalCosts, totalPrice, markup, pricePerGram, mfactor){

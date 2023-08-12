@@ -41,9 +41,20 @@ function RunCalculator() {
 }
 
 function UpdateTexts(pricePerSpeaker, totalPrice){
-    document.getElementById("price").textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(totalPrice));
+    UpdateTextContent("price", new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(totalPrice)));
 
-    document.getElementById("pricePerAmount").textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(pricePerSpeaker));
+    UpdateTextContent("pricePerAmount", new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(pricePerSpeaker)));
+}
+
+function UpdateTextContent(id, content){
+    let contentElement = document.getElementById(id);
+    if(contentElement.textContent != content){
+        contentElement.classList.add("fadeOut");
+        setTimeout(() => {
+            contentElement.textContent = content;
+            contentElement.classList.remove("fadeOut");
+        }, 200);
+    }
 }
 
 function PrintToConsole(numberOfSpeakers, totalCosts, totalPrice, markup, pricePerSpeaker, mfactor){

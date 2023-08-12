@@ -99,6 +99,7 @@ select{
 .result{
     flex-grow: 1;
     text-align: right;
+    transition: opacity 0.2s ease;
 }
 
 input{
@@ -111,6 +112,7 @@ input{
     text-align: right;
     color: #FF7719;
     margin: 4px;
+    transition: opacity 0.2s ease;
 }
 
 .break{
@@ -163,6 +165,10 @@ p{
     z-index: -1;
     opacity: 0.3;
     margin-top: -5px;
+}
+
+.fadeOut {
+    opacity: 0;
 }
 
 @media (min-width:960px){
