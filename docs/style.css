@@ -1,0 +1,222 @@
+@font-face {
+    font-family: LiberationSans;
+    src: url(LiberationSans-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: LiberationSans;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-top: 15px;
+}
+
+header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+header h2{
+    margin-top: 0;
+}
+
+header p{
+    font-size: 8px;
+}
+
+.pageLinkHolder{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.pageLinkHolder a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: #292929;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+body{
+    background-color: #121212;
+}
+
+.estimator{
+    padding: 0 20px;
+    display: block;
+    font-size: 16px;
+}
+
+h2{
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.materialProperties{
+    padding: 20px;
+    display: block;
+    padding-top: 0;
+    font-size: 16px;
+}
+
+select{
+    background-color: #292929;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 16px;
+    margin: 4px 8px;
+    flex-grow: 0;
+    color: #FF7719;
+    padding: 6px;
+    text-align: left;
+}
+
+.result{
+    flex-grow: 1;
+    text-align: right;
+    transition: opacity 0.2s ease;
+}
+
+input{
+    background-color: #292929;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 16px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    width: 0;
+    text-align: right;
+    color: #FF7719;
+    margin: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.break{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+label{
+    margin: 4px 8px;
+    padding: 6px;
+}
+
+.contentBox{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0;
+    background-color: #292929;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    flex-wrap: nowrap;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+p{
+    padding: 6px;
+    margin: 4px;
+}
+
+.productImage{
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 40px;
+}
+
+#tnanoBackgroundLogo{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    margin-left: 1px;
+    z-index: -1;
+    opacity: 0.3;
+    margin-top: -5px;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+@media (min-width:960px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        min-height: 120vh;
+    }
+    header{
+        width: 900px;
+    }
+    
+    .estimator{
+        width: 440px;
+    }
+
+    .materialProperties{
+        width: 440px;
+    }
+
+    #tnanoBackgroundLogo{
+        position: absolute;
+        width: 600px;
+        height: auto;
+        margin-left: -300px;
+        z-index: -1;
+        opacity: 0.3;
+        margin-top: -60vh;
+    }
+
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+        display: none;
+    }
+
+    .productImage{
+        width: 80%;
+        height: auto;
+        margin: 0;
+        margin-left: 10%;
+    }
+}

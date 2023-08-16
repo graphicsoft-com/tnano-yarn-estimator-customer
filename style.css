@@ -6,7 +6,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/ 
     font-family: LiberationSans;
     color: white;
 }
@@ -91,9 +90,11 @@ select{
     border-radius: 4px;
     padding: 6px;
     font-size: 16px;
-    margin-left: -2px;
+    margin: 4px 8px;
     flex-grow: 0;
     color: #FF7719;
+    padding: 6px;
+    text-align: left;
 }
 
 .result{
@@ -108,7 +109,10 @@ input{
     border-radius: 4px;
     padding: 6px;
     font-size: 16px;
-    flex-grow: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    width: 0;
     text-align: right;
     color: #FF7719;
     margin: 4px;
@@ -122,10 +126,8 @@ input{
 }
 
 label{
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin: 4px 8px;
+    padding: 6px;
 }
 
 .contentBox{
@@ -145,8 +147,7 @@ label{
 }
 
 p{
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 6px;
     margin: 4px;
 }
 
@@ -184,7 +185,7 @@ p{
         justify-content: flex-start;
         flex-wrap: wrap;
         padding-top: 40px;
-        min-height: 100vh;
+        min-height: 120vh;
     }
     header{
         width: 900px;
@@ -205,7 +206,7 @@ p{
         margin-left: -300px;
         z-index: -1;
         opacity: 0.3;
-        margin-top: -350px;
+        margin-top: -60vh;
     }
 
     input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
