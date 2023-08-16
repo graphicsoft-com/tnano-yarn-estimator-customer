@@ -1,0 +1,41 @@
+name: Minify and Obfuscate JavaScript
+
+on:
+  push:
+    paths:
+      - 'yarnCalculator.js'
+      - 'hydroSonixCalculator.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install terser
+      run: npm install -g terser
+
+    - name: Minify JavaScript file 1
+      run: terser yarnCalculator.js -o docs/yarnCalculator.min.js
+
+    - name: Minify JavaScript file 2
+      run: terser hydroSonixCalculator.js -o docs/hydroSonixCalculator.min.js
+
+    - name: Obfuscate and Commit
+      run: |
+        npm install -g javascript-obfuscator
+        javascript-obfuscator docs/yarnCalculator.min.js --output docs/yarnCalculator.js
+        javascript-obfuscator docs/hydroSonixCalculator.min.js --output docs/hydroSonixCalculator.js
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/yarnCalculator.js
+        git add docs/hydroSonixCalculator.js
+        git commit -m "Minify and Obfuscate JavaScript files" -a || echo "No changes to commit"
+        git push
