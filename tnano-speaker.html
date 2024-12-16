@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TNano Yarn Estimator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TNano Estimator</h1>
+      <p>V2.3</p>
+      <div class="pageLinkHolder">
+        <a href="index.html">50 µm yarn</a>
+        <a href="hydroSonix.html">HydroSonix Speaker</a>
+        <a href="tnano-speaker.html" style="outline: #ff7719 solid 2px"
+          >Tnano Speaker</a
+        >
+      </div>
+    </header>
+
+    <img src="media/TnanoLogo.png" id="tnanoBackgroundLogo" />
+
+    <div class="content">
+      <div class="estimator">
+        <!-- <img src="media/Yarn V4.png" class="productImage" /> -->
+        <h2>Inputs</h2>
+
+        <div class="contentBox">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            min="0.001"
+            max="100000"
+            value="1"
+            onchange="AmountUnitChanged(this.value)"
+          />
+        </div>
+
+        <h2>Results</h2>
+
+        <div class="contentBox">
+          <p>Price</p>
+          <p class="result" id="pricePerAmount">$25,648</p>
+        </div>
+
+        <div class="contentBox">
+          <p>In total</p>
+          <p class="result" id="price">$1,000,000</p>
+        </div>
+      </div>
+
+      <div class="materialProperties">
+        <h2>Thermoacoustic Earphone Properties</h2>
+
+        <div class="contentBox">
+          <p>Applied Power:</p>
+          <p>0.35 W and 1 mW</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Distance from Source:</p>
+          <p>1.0 cm</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Sheet Material:</p>
+          <p>Single layer of multiwalled carbon nanotube sheet</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Sheet Resistance:</p>
+          <p>1 kΩ per square</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Transparency:</p>
+          <p>90%</p>
+        </div>
+
+        <div class="contentBox">
+          <p>PCB Plate Thickness:</p>
+          <p>0.2 mm</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Opening Size:</p>
+          <p>10 × 10 mm</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Sound Pressure Level (SPL):</p>
+          <p>Calculated using 20 log(pmₑc/p_ref) dB</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Frequency Range for SPL Measurement:</p>
+          <p>10 Hz to 100 kHz</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Sound Pressure Spectrum:</p>
+          <p>Presented in both linear and logarithmic scales</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Output Signal:</p>
+          <p>
+            Doubled-frequency sound resulting from the thermoacoustic effect
+          </p>
+        </div>
+
+        <div class="contentBox">
+          <p>DC Bias Current:</p>
+          <p>Required to avoid the double-frequency effect</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Power Density Assumption:</p>
+          <p>Sound pressure proportional to applied power</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Frame Weight:</p>
+          <p>0.1684 g</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Weight Reduction:</p>
+          <p>Two orders of magnitude compared to coil loudspeaker capsule</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Output SPL Compared to Coil Loudspeakers:</p>
+          <p>Two orders lower for open freestanding MWNT sheet</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Sound Pressure Relationship:</p>
+          <p>Linear function of frequency and power</p>
+        </div>
+
+        <div class="contentBox">
+          <p>Spectrum Adjustment:</p>
+          <p>
+            Low-frequency signals must be enhanced electronically for a flat
+            spectrum
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="tnano-speaker.js"></script>
+  </body>
+</html>
