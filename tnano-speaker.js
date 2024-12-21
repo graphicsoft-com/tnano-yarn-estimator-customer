@@ -150,7 +150,6 @@ const renderProperties = () => {
   thermoacousticEarphoneProperties.forEach((item) => {
     materialProperties.innerHTML += renderPropDiv(item.property, item.value);
   });
-  // materialProperties.innerHTML += '<div id="see-more"><a>See More</a></div>'
 }
 
 document.addEventListener("DOMContentLoaded", () => {
