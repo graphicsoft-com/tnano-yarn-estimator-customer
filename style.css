@@ -103,6 +103,10 @@ select{
     transition: opacity 0.2s ease;
 }
 
+.fadeOut {
+    opacity: 0;
+}
+
 input{
     background-color: #292929;
     border: 0;
