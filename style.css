@@ -103,6 +103,10 @@ select{
     transition: opacity 0.2s ease;
 }
 
+.fadeOut {
+    opacity: 0;
+}
+
 input{
     background-color: #292929;
     border: 0;
@@ -168,8 +172,20 @@ p{
     margin-top: -5px;
 }
 
-.fadeOut {
-    opacity: 0;
+#see-more{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+#see-more a {
+    color: #FF7719;
+}
+
+#see-more a:hover, 
+#see-more a:active {
+    cursor: pointer;
+    color:white;
 }
 
 @media (min-width:960px){
