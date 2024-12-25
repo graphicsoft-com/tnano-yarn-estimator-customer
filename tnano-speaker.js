@@ -59,7 +59,6 @@ function ReformatText(number) {
   }).format(Math.round(number));
 }
 
-
 const thermoacousticEarphoneProperties = [
   {
     property: "Applied Power",
@@ -90,48 +89,12 @@ const thermoacousticEarphoneProperties = [
     value: "10 × 10 mm"
   },
   {
-    property: "Sound Pressure Level (SPL)",
-    value: "Calculated using 20 log(pmₑc/p_ref) dB"
-  },
-  {
     property: "Frequency Range for SPL Measurement",
     value: "10 Hz to 100 kHz"
   },
   {
-    property: "Sound Pressure Spectrum",
-    value: "Presented in both linear and logarithmic scales"
-  },
-  {
-    property: "Output Signal",
-    value: "Doubled-frequency sound resulting from the thermoacoustic effect"
-  },
-  {
-    property: "DC Bias Current",
-    value: "Required to avoid the double-frequency effect"
-  },
-  {
-    property: "Power Density Assumption",
-    value: "Sound pressure proportional to applied power"
-  },
-  {
     property: "Frame Weight",
     value: "0.1684 g"
-  },
-  {
-    property: "Weight Reduction",
-    value: "Two orders of magnitude compared to coil loudspeaker capsule"
-  },
-  {
-    property: "Output SPL Compared to Coil Loudspeakers",
-    value: "Two orders lower for open freestanding MWNT sheet"
-  },
-  {
-    property: "Sound Pressure Relationship",
-    value: "Linear function of frequency and power"
-  },
-  {
-    property: "Spectrum Adjustment",
-    value: "Low-frequency signals must be enhanced electronically for a flat spectrum"
   }
 ];
 
